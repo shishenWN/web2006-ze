@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //function add(a,b){return a+b};
+    var add=(a,b)=>a+b;
+    console.log(add(3,5));
+    var arr=[2,33,44,55,3,2];
+    //arr.sort(function(a,b){return a-b});
+    arr.sort((a,b)=>a-b);
+    var str="you can you up";
+    //str=str.replace(/\b[a-z]/ig,function(kw){return kw.toUpperCase()});
+    str=str.replace(/\b[a-z]/ig,kw=>kw.toUpperCase());
+    console.log(str);
+     var arr=["亮亮","然然","东东"];
+    //arr.forEach(function(elem){console.log(`${elem}到`)});
+    arr.forEach(elem=>console.log(`${elem}到`));
+    var arr1=[1,2,3,4,5];
+    //var arr11=arr1.map(function(elem){return elem*2});
+    var arr11=arr1.map(elem=>elem*2);
+    console.log(arr11);
+    var arr2=[1,2,3,4,5];
+    //var arr22=arr2.reduce(function(box,elem){return box+elem});
+    var arr22=arr2.reduce((box,elem)=>box+elem);
+    console.log(arr22);
+    var arr3=[1,2,3,4,5];
+    //var arr33=arr3.filter(function(elem){return elem%2==0});
+    var arr33=arr3.filter(elem=>elem%2==0);
+    console.log(arr33);
+    var n=5;
+    //var timer=setInterval(function(){
+    var timer=setInterval(()=>{
+      n--;
+      if(n==0){
+        console.log("boom!!!")
+        clearInterval(timer)
+      }else{
+         console.log(n)
+      }
+    })
+  </script>
+</body>
+</html>

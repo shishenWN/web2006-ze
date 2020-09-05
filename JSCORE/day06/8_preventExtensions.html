@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     "use strict"
+    var eric={
+      eid:1001,
+      ename:"埃里克",
+      salary:12000
+    }
+    var obj=Object.getOwnPropertyDescriptor(eric,"eid");
+    Object.defineProperties(eric,{
+      eid:{
+        writable:false,
+        configurable:false
+      },
+      salary:{
+        configurable:false,enumerable:false
+      },ename:{
+        configurable:false
+      }
+    });
+    Object.freeze(eric);//禁止添加和修改--冻结
+    //Object.seal(eric);//禁止添加新属性同时禁止删除现有属性--密封
+    //Object.preventExtensions(eric);//禁止添加新属性
+    // eric.Eid=1005;
+    //eric.__eid=1002;
+    //delete eric.eid;//删除eid
+    console.log(eric)
+  </script>
+</body>
+</html>

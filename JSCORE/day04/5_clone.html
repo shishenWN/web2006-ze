@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var lilei=new Object();
+    lilei.name="lilei";
+    lilei.nl=20;
+    lilei.gn=function(){
+      console.log(`I'm ${this.name},I'm ${this.nl}`);
+    }
+    function clone(oldObj){ 
+      var newObj={};
+      for(var old in oldObj){
+        newObj[old]=oldObj[old];
+      }
+      return newObj;
+    }
+    var lilei2=clone(lilei);
+    console.log(lilei2);
+  </script>
+</body>
+</html>

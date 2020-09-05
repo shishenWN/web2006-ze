@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function add(){
+    // //var add=()=>{//报错
+    //   var sum=0;
+    //   for(n of arguments){
+    //     sum+=n
+    //   }
+    //   return sum
+    // }
+    var add=(...arr)=>{
+      var sum=0;
+      for(n of arr){
+        sum+=n;
+      }
+      return sum
+    }
+    console.log(add(1,2,3))
+    console.log(add(1,2,3,4,5))
+  </script>
+</body>
+</html>

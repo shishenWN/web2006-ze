@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict"
+    var eric={
+      eid:1001,
+      ename:"埃里克",
+      salary:12000
+    }
+    var obj=Object.getOwnPropertyDescriptor(eric,"eid");
+    console.log(obj);
+    Object.defineProperty(eric,"eid",{
+        writable:false,//禁止修改
+        enumerable:false,//禁止遍历
+        configurable:false//禁止删除同时禁止再次更改前两个属性双保险
+    })
+    var obj=Object.getOwnPropertyDescriptor(eric,"eid");
+
+    console.log(obj);
+
+    //eric.eid=-1;
+    console.log(eric);
+  </script>
+</body>
+</html>

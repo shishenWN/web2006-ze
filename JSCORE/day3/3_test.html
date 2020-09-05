@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=., initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var phone=prompt("请输入手机号");
+    var reg=/^1[3-9]\d{9}$/;
+    var res=reg.test(phone);
+    if(res){
+      document.write(`<h1 style="color: green;"> 手机号格式正确</h1>`);
+    }else{
+      document.write(`<h1 style="color: red;"> 手机号格式不正确，滚回去重填</h1>`);
+      
+    }
+
+  </script>
+</body>
+</html>

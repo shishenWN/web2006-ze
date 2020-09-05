@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     //1.请用户输入一条消息
+     var msg=prompt("请输入内容");
+     var arr=["我擦","卧槽","我艹","我操"];
+     console.log(arr.join("|"));
+     
+    //2.查找敏感词
+    //var i=msg.search(/([我卧握]|wo)\s*([操艹草槽曹]|cao)/i);
+    var i=msg.search(new RegExp(arr.join("|"),"ig"));
+    //3.判断是否i有敏感msg.search()词
+    if(i!=-1){
+      //4.通过判断返回
+      //alert(`滚回去重新输入`)
+      document.write( `<h1 style="color:red">滚回去重新输入</h1>`);
+    }else{
+      document.write(`<h1 style="color:green">然哥说:“${msg}”</h1>`);
+    }
+  </script>
+</body>
+</html>

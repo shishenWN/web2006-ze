@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function liang(){
+      return new Promise(function(door){
+        var bang="亮的接力棒"
+        console.log(`亮拿着${bang}起跑`);
+      setTimeout(function(){
+        console.log(`亮拿着${bang}到达终点`);
+        door(bang)
+      },6000)
+      })
+    }
+    function ran(bang){
+      return new Promise(function(door){
+        console.log(`然拿着${bang}起跑`);
+      setTimeout(function(){
+        console.log(`然拿着${bang}到达终点`);
+        door(bang)
+      },4000)
+      })
+      
+    }
+    function dong(bang){
+      return new Promise(function(){
+        console.log(`东拿着${bang}起跑`);
+      setTimeout(function(){
+        console.log(`东拿着${bang}到达终点`)
+      },2000)
+      })
+    }
+    liang().then(ran).then(dong)
+  </script>
+</body>
+</html>

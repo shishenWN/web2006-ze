@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var msg=prompt("请输入您要发送的内容");
+    var arr=msg.match(/([卧我握沃]|wo)\s*([艹曹操槽草]|cao)/ig);
+    if(arr!=null){
+      document.write(`您输入的内容带有敏感词${arr},请滚回去重新输入`);
+    }else{
+      document.write(`${msg}`);
+    }
+  </script>
+</body>
+</html>

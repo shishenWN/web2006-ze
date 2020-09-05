@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function fib(i){
+      if(i<3){
+        return 1;
+      }else{
+        //return fib(i-1)+fib(i-2);
+        return arguments.callee(i-1)+arguments.callee(i-2)
+        
+      }
+    }
+    console.log(fib(10))
+  </script>
+</body>
+</html>

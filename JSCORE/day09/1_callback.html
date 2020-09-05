@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function liang(next){
+      console.log(`亮起跑`);
+      setTimeout(function(){
+        console.log(`亮到达终点`);
+        next()
+      },6000)
+    }
+    function ran(next){
+      console.log(`然起跑`);
+      setTimeout(function(){
+        console.log(`然到达终点`);
+        next()
+      },4000)
+    }
+    function dong(){
+      console.log(`东起跑`);
+      setTimeout(function(){
+        console.log(`东到达终点`)
+      },2000)
+    }
+    //错误
+    // liang()
+    // ran()
+    // dong()
+    //旧js正确
+    liang(()=>{ran(()=>{dong()})})
+    
+  </script>
+</body>
+</html>

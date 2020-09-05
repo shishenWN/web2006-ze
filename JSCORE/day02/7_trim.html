@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function trimLeft(a){
+      return a.replace(/^\s+/,"");
+    }
+    function trimRight(a){
+      return a.replace(/\s+$/,"");
+    }
+    function trim(a){
+      return a.replace(/(^\s+)|(\s+$)/g,"");
+    }
+    var a="   you can you up no can no bibi   ";
+    console.log(trimLeft(a));
+    console.log(trimRight(a));
+    console.log(trim(a));
+    // var a="   you can you up no can no bibi   ";
+    // console.log(a.trimLeft());
+    // console.log(a.trimRight());
+    // console.log(a.trim());
+  </script>
+</body>
+</html>

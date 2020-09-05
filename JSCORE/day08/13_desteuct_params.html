@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function intr(zs="奥尔良鸡腿堡",xc="上校鸡块",yl="卡布奇诺"){
+      console.log(`主食:${zs},小吃:${xc},饮料:${yl}`)
+    }
+    intr("香辣鸡腿堡","土豆泥","大可")
+    intr()
+    function intr1({
+      zs="奥尔良鸡腿堡",
+      xc="上校鸡块",yl="卡布奇诺"
+    }){
+      console.log(`主食:${zs},小吃:${xc},饮料:${yl}`)
+    }
+    intr1({})
+    intr1({
+      yl:"雪碧"
+    })
+  </script>
+</body>
+</html>

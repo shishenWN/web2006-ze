@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function student(sname,sage){
+      // var student=(sname,sage)=>{//报错,箭头函数不是构造函数
+      this.sage=sage;
+      this.sname=sname
+    }
+    var lilei=new student("lilei",25);
+    console.log(lilei);
+    function add(){
+    //var add=()=>{//报错，箭头函数禁止使用arguments
+      var result=0;
+      for(var i=0;i<arguments.length;i++){
+        result+=arguments[i]
+      }
+      return result
+    }
+    console.log(add(1,2,3,4,5))
+  </script>
+</body>
+</html>

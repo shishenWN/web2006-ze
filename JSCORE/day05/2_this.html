@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var lilei={
+      name:"li lei",
+      nl:20,
+      gn:function(){
+        console.log(`I'm ${this.name},I'm ${this.nl}`);
+      }
+    }
+    lilei.gn();//this指点前的lilei
+
+    function Student(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+      
+    }
+    var hmm=new Student("hanmeimei",20);
+    console.log(hmm);//指new正在创建的新对象
+    function Student1(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+      
+    }
+    var lily=Student1("lily",22);
+    //fun()前边既没有点也没有new则this指window
+  </script>
+</body>
+</html>

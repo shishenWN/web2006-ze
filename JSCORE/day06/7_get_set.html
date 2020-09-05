@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict"
+    var eric={
+      eid:1001,
+      ename:"埃里克",
+      eage:25,
+      salary:12000
+    }
+    console.log(eric);
+
+    Object.defineProperties(eric,{
+      age:{
+        value:eric.eage,
+        writable:true,
+        enumerable:false,
+        configurable:false
+      },
+      eage:{
+        get:function(){
+          return this.age;
+        },
+        set:function(value){
+          if(value>=18&&value<=65){
+           this.age=value;
+          }else{
+            throw Error("滚回去重新更改");
+          }
+        },
+        enumerable:true,
+        configurable:false
+      }
+    });
+
+    eric.eage=27;
+    console.log(eric);
+    eric.eage=7;
+    console.log(eric);
+  </script>
+</body>
+</html>

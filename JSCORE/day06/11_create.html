@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var father={
+      money:1000000000,
+      car:"fencha"
+    }
+    var hmm=Object.create(father);
+    console.log(hmm);
+    console.log(hmm.money,hmm.car)
+    var lily=Object.create(father,{
+      fangzi:{
+        value: "北京一环200平",
+        enumerable:true,
+        configurable:father,
+        writable:true
+      },
+      bao:{
+        value:"古驰",
+        enumerable:true,
+        configurable:father,
+        writable:true
+      }
+    });
+    console.log(lily);
+    console.log(lily.money,lily.car)
+  </script>
+</body>
+</html>

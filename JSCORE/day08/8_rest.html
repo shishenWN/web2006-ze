@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function jisuan(ename,...arr){
+      console.log(`ename:${ename}`)
+      console.log(`arr:${arr}`)
+      console.log(`${ename}的总工资是${arr.reduce((box,elem)=>box+elem,0)}`)
+    }
+    jisuan("lilei",10000,1000,3000)
+    jisuan("hanmeimei",3000,4000,5000,1000,200)
+    jisuan("lily")
+  </script>
+</body>
+</html>
